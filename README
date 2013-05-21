@@ -1,0 +1,45 @@
+ABOUT
+
+This is a simple fork of "orpie" by Paul J. Pelzl <pelzlpj@eecs.umich.edu>
+that has been refactored to build with ocamlbuild, findlib, and GNU GSL
+and ncurses libraries implemented/wrapped in OCaml.
+The modified source is that of orpie v1.5.1.  Most of the code and all
+of the documentation has been left intact (including those mysterious
+"arch" files), except that the generated man pages are included so that
+LaTeX is not needed to build them.
+
+Tests, which did not work in the original orpie-1.5.1, have not been
+fixed (TODO?).  Regardless, each test case passes if manually typed into
+the compiled binary.
+
+As this is about rescuing the best CLI calculator in existence from bit
+rot, there are no plans to update or improve this project.  I will only
+accept patches that address bugs I've introduced or licensing issues
+I've overlooked.
+(But, of course, feel free to fork and modify to your heart's content.)
+
+
+REQUIREMENTS
+
+Requirements:
+  - ocaml
+  - ocamlbuild
+  - findlib
+  - curses (OCaml library)
+  - gsl (OCaml library)
+
+(An easy way to fulfill these requirements is to use an OCaml package
+manager like OPAM (opam.ocamlpro.com) or GODI (godi.camlcity.org).)
+
+Tested with OCaml 4.00.1, curses 1.0.3, and gsl 1.11.0, though I suspect
+it'll work just fine with older versions.
+
+
+INSTALLATION
+
+Edit the PREFIX and SYSCONFDIR to your liking in the Makefile, then
+"make" to compile and (sudo) "make install" to install.
+
+
+Constantine Perepelitsa <cperepelitsa@gmail.com>
+Mon May 20 17:07:52 PDT 2013

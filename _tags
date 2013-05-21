@@ -1,0 +1,2 @@
+<units>: include
+<*>: package(gsl,curses,num,str), thread
